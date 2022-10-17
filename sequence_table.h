@@ -1,3 +1,6 @@
+#ifndef SEQUENCE_TABLE
+#define SEQUENCE_TABLE
+
 #include <stdio.h>
 #include <malloc.h>
 
@@ -114,7 +117,4 @@ sqTable modify(sqTable t, int targetIndex, Elem targetElem) {
     return t;
 }
 
-int main() {
-
-    return 0;
-}
+# endif
