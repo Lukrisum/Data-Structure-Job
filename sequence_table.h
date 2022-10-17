@@ -1,3 +1,4 @@
+// 作业 1
 #ifndef DATA_STRUCTURE_JOB_SEQUENCE_TABLE_H
 #define DATA_STRUCTURE_JOB_SEQUENCE_TABLE_H
 
@@ -79,8 +80,21 @@ sqTable delete(sqTable t, int target) {
         return t;
     }
 
+    // 从删除位置开始逐个前移
+    for (int i = target; i < t.len - 1; i++) {
+        t.base[i] = t.base[i + 1];
+    }
+
     // 重新分配空间，并捕捉错误
     t.base = (int *) realloc(t.base, (t.size - 1) * sizeof(Elem));
+    if (!t.base) {
+        printf("storage space allocation failed\n");
+        return t;
+    }
+    t.size -= 1;
+
+    // 删除完成，长度减一
+    t.len--;
 
     return t;
 }
