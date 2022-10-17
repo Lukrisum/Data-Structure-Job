@@ -1,5 +1,5 @@
-#ifndef SEQUENCE_TABLE
-#define SEQUENCE_TABLE
+#ifndef DATA_STRUCTURE_JOB_SEQUENCE_TABLE_H
+#define DATA_STRUCTURE_JOB_SEQUENCE_TABLE_H
 
 #include <stdio.h>
 #include <malloc.h>
@@ -88,7 +88,7 @@ sqTable delete(sqTable t, int target) {
 // 查找
 int find(sqTable t, Elem elem) {
 
-    g// 顺序查找
+    // 顺序查找
     for (int i = t.len; i >= 0; i--) {
         if (elem == t.base[i]) {
             return i;

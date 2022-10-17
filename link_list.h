@@ -1,5 +1,5 @@
-#ifndef LINK_LIST
-#define LINK_LIST
+#ifndef DATA_STRUCTURE_JOB_LINK_LIST_H
+#define DATA_STRUCTURE_JOB_LINK_LIST_H
 
 #include<stdio.h>
 #include <malloc.h>
@@ -76,4 +76,4 @@ int findIndex(linkList *p, Elem target) {
     return -1;
 }
 
-#endif
+#endif //DATA_STRUCTURE_JOB_LINK_LIST_H
