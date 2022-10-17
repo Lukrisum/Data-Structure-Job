@@ -87,20 +87,15 @@ sqTable delete(sqTable t, int target) {
 
 // 查找
 int find(sqTable t, Elem elem) {
-    int res = 0;
 
-    // 顺序查找
+    g// 顺序查找
     for (int i = t.len; i >= 0; i--) {
         if (elem == t.base[i]) {
-            res = i;
-            break;
-        }
-        if (i == 0) {
-            return -1;
+            return i;
         }
     }
 
-    return res;
+    return -1;
 }
 
 // 修改
